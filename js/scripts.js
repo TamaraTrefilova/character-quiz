@@ -2,19 +2,17 @@ $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     $(".justin, .brad, .katy").hide();
-    var inputName = $("input.name").val();
-    var inputAge = $("input.age").val();
-    var inputColor = $(".color").val();
-    var age = parseInt($("input.age").val());
+    var inputFlavor = $("input:radio[name=flavor]:checked").val();
+    var inputHair = $("input:radio[name=hair]:checked").val();
+    var inputAnimal = $("input:radio[name=animal]:checked").val();
+
     // alert("age=" + age + "color=" + inputColor);
-    if (age < 21 && inputColor === "red") {
+    if (inputAnimal === "owl") {
       $(".justin").show();
-    } else if (age >= 21 && inputColor === "blue") {
+    } else if (inputAnimal === "rat" && inputHair === "red") {
       $(".brad").show();
-    } else if (age >= 45 && inputColor === "green") {
-      $(".katy").show();
     } else {
-      $(".katy, .brad").show();
+      $(".katy").show();
     }
   });
 });

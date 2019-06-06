@@ -1,0 +1,11 @@
+.justin, .brad, .katy {
+  display: none;
+}
+
+img {
+  width: 200px;
+}
+
+.form-group > p {
+  font-weight: bold;
+}
